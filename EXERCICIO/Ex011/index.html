@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagens Dinamias</h1>
+    <p>Tente abrir esse site em varios dispositivos diferentes ou simplesmente sumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagem/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagem/foto-m.png" type="image/png">
+        <img src="imagem/foto-g.png" alt="Imagem flexivel">
+    </picture>
+
+    <h1>Reproduzir Audio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML</p>
+    <p>Exemplo 1</p>
+    <audio src="midia/melhor-eu-ir.mp3" controls autoplay></audio>
+    <p>Exemplo 2</p>
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/joy-to-the-world.mp3" type="audio/mpeg">
+        <source src="midia/joy-to-the-world.ogg" type="audio/ogg">
+        <source src="midia/joy-to-the-world.wav" type="audio/wav">
+    </audio>
+
+</body>
+</html>
