@@ -21,9 +21,21 @@
 
         th, td {
             border: 1px solid black;
+            padding: 2.5px;
         }
-        th.class: pp{
+        th.pp {
             background-color: darkgrey;
+            color: white;
+            text-align: left;
+        }
+        td.num {
+            text-align: center;
+        }
+        td.res {
+            background-color: darkgray;
+            color: white;
+            text-align: center;
+            
         }
         
     </style>
@@ -33,23 +45,23 @@
     <table>
         <thead>
             <tr>
-                <th rowspan="2">Àrea</th>
-                <th rowspan="2">Diciplinas</th>
-                <th colspan="2">Notas</th>
-                <th rowspan="2">Média</th>
+                <th scope="col" rowspan="2">Àrea</th>
+                <th scope="col" rowspan="2">Diciplinas</th>
+                <th scope="colgroup" colspan="2">Notas</th>
+                <th scope="col" rowspan="2">Média</th>
             </tr>
             <tr>
-                <th>Nota 1</th>
-                <th>Nota 2</th>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th scope="rowgroup" rowspan="4">Exatas</th>
                 <td>Matemática</td>
-                <td>8.0</td>
-                <td>7.0</td>
-                <td>7.5</td>
+                <td class="num">8.0</td>
+                <td class="num">7.0</td>
+                <td class="num">7.5</td>
             </tr>
             <tr>
                 <td>Física</td>
@@ -70,8 +82,8 @@
                 <td class="num">7.5</td>
             </tr>
             <tr>
-                <td colspan="4">Média de Exatas</td>
-                <td class="num">8.25</td>
+                <th class="pp" colspan="4">Média de Exatas</th>
+                <td class="res"><strong>8.25</strong></td>
             </tr>
             <tr>
                 <th scope="rowgroup" rowspan="2">Humanas</th>
@@ -88,7 +100,7 @@
             </tr>
             <tr>
                 <th class="pp" scope="row" colspan="4">Média Humanas</th>
-                <td class="num">9.0</td>
+                <td class="res"><strong>9.0</strong></td>
             </tr>
     </tbody>
     </table>
